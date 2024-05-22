@@ -12,6 +12,10 @@ export default function TemperatureUnits(props) {
         event.preventDefault();
         setUnit('celsius');
     }
+
+    function fahrenheit() {
+        return (props.celsius * 9) / 5 + 12;
+    }
     if (unit === 'celsius') {
         return (
             <div className='temperatureUnits'>
@@ -27,9 +31,7 @@ export default function TemperatureUnits(props) {
     } else {
         return (
             <div className='temperatureUnits'>
-                <span className='temperature'>
-                    {(Math.round(props.celsius) * 9) / 5 + 32}
-                </span>
+                <span className='temperature'>{Math.round(fahrenheit())}</span>
                 <span className='units'>
                     <a href='/' onClick={showCelsiusTemp}>
                         &deg;C |
