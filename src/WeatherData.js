@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Card from 'react-bootstrap/Card';
 import './WeatherData.css';
 import FormattedDate from './FormattedDate';
+import TemperatureUnits from './TemperatureUnits';
 
 export default function WeatherData(props) {
     if (props.weatherData) {
@@ -21,8 +22,9 @@ export default function WeatherData(props) {
                             <FormattedDate date={date} />
                             <img src={icon} alt={description} />
                             <div className='temp'>
-                                {Math.round(temperature)}
-                                <span className='units'>&deg;C/&deg;F</span>
+                                <span className='tempUnits'>
+                                    <TemperatureUnits celsius={temperature} />
+                                </span>
                             </div>
                         </div>
                     </Card.Body>
