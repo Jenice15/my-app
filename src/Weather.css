@@ -1,0 +1,51 @@
+.container {
+    height: 200px;
+}
+
+.heading {
+    color: azure;
+}
+
+.cityName {
+    color: azure;
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+
+.searchBar {
+    border: 1px solid rgb(248, 241, 241);
+    background: linear-gradient(
+        109.6deg,
+        rgb(237, 150, 231) 12.6%,
+        rgb(191, 159, 237) 91.1%
+    );
+    width: 300px;
+    height: 35px;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    caret-color: #a65abe;
+    color: azure;
+}
+
+::placeholder {
+    font-size: 15px;
+    color: rgb(241, 244, 245);
+}
+.btn {
+    background-color: #a65abe;
+    width: 80px;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid rgb(248, 241, 241);
+    color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.button:hover {
+    color: aliceblue;
+    background-color: #e47caf !important;
+    border: 1px solid rgb(248, 241, 241) !important;
+    transform: 0.7s;
+}

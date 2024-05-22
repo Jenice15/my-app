@@ -1,38 +1,51 @@
+:root {
+    --primary-color: azure;
+}
 .App {
-  text-align: center;
+    text-align: center;
+    color: var(--primary-color);
+    background-image: url('https://s3.amazonaws.com/shecodesio-production/uploads/files/000/101/262/original/React_weather_background.jpg?1697674372');
+    background-repeat: no-repeat;
+    height: 800px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    /* background-attachment: scroll; */
+}
+.card {
+    position: relative;
+    top: 35px;
+    width: 500px;
+    height: 500px;
+    border-radius: 30px;
+    background: linear-gradient(-225deg, #9d71f4 0%, #b15fc1 48%, #f887a8 100%);
+}
+/* .weather-summary { */
+/* position: relative; */
+/* right: 160px; */
+/* top: 15px; */
+/* color: #61dafb; */
+/* } */
+.date-time {
+    margin-top: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.temp {
+    font-size: 50px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.units {
+    font-size: 20px;
+    position: relative;
+    top: -20px;
 }
+/* .summary-data { */
+/* font-size: 30px; */
+/* list-style-type: none; */
+/* position: relative; */
+/* right: -300px; */
+/* top: -190px; */
+/* } */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aboutMe {
+    color: white;
 }

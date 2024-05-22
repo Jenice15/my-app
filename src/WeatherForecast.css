@@ -1,0 +1,18 @@
+.weather-table {
+    display: flex;
+}
+.weather-forecast {
+    margin-top: -60px;
+    margin-left: 150px;
+}
+
+.city-name {
+    margin-left: 30px;
+}
+
+.forecast-card {
+    width: 450px;
+    position: relative;
+    right: 167px;
+    top: 300px;
+}

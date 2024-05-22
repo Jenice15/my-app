@@ -1,0 +1,22 @@
+.summary-card {
+    width: 235px;
+    height: 200px;
+    position: relative;
+    top: 40px;
+    left: -20px;
+    color: var(--primary-color);
+}
+.summary-data-card {
+    width: 235px;
+    height: 200px;
+    position: relative;
+    top: -157px;
+    left: 227px;
+    font-size: 25px;
+    color: var(--primary-color);
+}
+.summary-data {
+    list-style-type: none;
+    margin-left: -33px;
+    margin-top: 25px;
+}

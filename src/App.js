@@ -1,25 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
+import Weather from './Weather';
+// import WeatherForecast from './WeatherForecast';
+import Card from 'react-bootstrap/Card';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+    // alert('Hello');
+    return (
+        <div className='App'>
+            <Card className='Card mx-auto'>
+                <Card.Body>
+                    <div className='Wrapper'>
+                        <div className='container'>
+                            <Weather />
+                        </div>
+                    </div>
+                </Card.Body>
+            </Card>
+            <a
+                className='aboutMe'
+                href='https://github.com/Jenice15/react-weather-app'
+            >
+                Open source code by
+            </a>
+            <a href='https://jenicemartin.netlify.app/' className='aboutMe'>
+                {' '}
+                Jenice Martin
+            </a>
+        </div>
+    );
 }
-
-export default App;
