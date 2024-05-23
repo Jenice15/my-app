@@ -39,7 +39,7 @@ export default function Weather() {
                 </form>
                 <h1 className='cityName'>{city}</h1>
                 <WeatherData weatherData={weatherData} />
-                <WeatherForecast />
+                <WeatherForecast cordinates={weatherData} />
             </div>
         </div>
     );
