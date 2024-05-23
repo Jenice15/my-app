@@ -4,7 +4,7 @@ import WeatherData from './WeatherData';
 import './Weather.css';
 
 export default function Weather() {
-    const [city, setCity] = useState(null);
+    let [city, setCity] = useState(null);
     const [weatherData, setWeatherData] = useState(null);
     // let upperCaseCity = city.toUpperCase();
 
@@ -16,6 +16,7 @@ export default function Weather() {
 
         let apiKey = '1ee4264117b73d2263eecd562f31ef5c';
         let units = 'metric';
+        city = city.split(' ').join('+');
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
         console.log(apiUrl);
         axios.get(apiUrl).then(function (response) {
