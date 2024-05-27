@@ -7,6 +7,7 @@ import Card from 'react-bootstrap/Card';
 import axios from 'axios';
 
 export default function WeatherForecast(props) {
+    // if (props.weatherData) {
     function showForecast(response) {
         console.log(response.data);
     }
@@ -48,4 +49,5 @@ export default function WeatherForecast(props) {
             </div>
         </div>
     );
+    // }
 }
