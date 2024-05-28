@@ -16,7 +16,7 @@
     position: relative;
     top: 35px;
     width: 500px;
-    height: 620px;
+    height: 80%;
     border-radius: 30px;
     background: linear-gradient(-225deg, #9d71f4 0%, #b15fc1 48%, #f887a8 100%);
 }

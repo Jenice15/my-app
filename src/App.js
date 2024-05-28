@@ -15,17 +15,22 @@ export default function App() {
                         </div>
                     </div>
                 </Card.Body>
+                <span>
+                    <a
+                        className='aboutMe'
+                        href='https://github.com/Jenice15/react-weather-app'
+                    >
+                        Open source code by
+                    </a>
+                    <a
+                        href='https://jenicemartin.netlify.app/'
+                        className='aboutMe'
+                    >
+                        {' '}
+                        Jenice Martin
+                    </a>
+                </span>
             </Card>
-            <a
-                className='aboutMe'
-                href='https://github.com/Jenice15/react-weather-app'
-            >
-                Open source code by
-            </a>
-            <a href='https://jenicemartin.netlify.app/' className='aboutMe'>
-                {' '}
-                Jenice Martin
-            </a>
         </div>
     );
 }

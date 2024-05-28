@@ -4,9 +4,11 @@ import Card from 'react-bootstrap/Card';
 import './WeatherData.css';
 import FormattedDate from './FormattedDate';
 import TemperatureUnits from './TemperatureUnits';
+import WeatherForecast from './WeatherForecast';
 
 export default function WeatherData(props) {
     if (props.weatherData) {
+        const coordinates = props.weatherData.coord;
         const temperature = props.weatherData.main.temp;
         const description = props.weatherData.weather[0].description;
         const humidity = props.weatherData.main.humidity;
@@ -38,6 +40,7 @@ export default function WeatherData(props) {
                         </ul>
                     </Card.Body>
                 </Card>
+                <WeatherForecast coordinates={coordinates} />
             </div>
         );
     }

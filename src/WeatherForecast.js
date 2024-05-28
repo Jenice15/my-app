@@ -1,53 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import './WeatherForecast.css';
-import ReactAnimatedWeather from 'react-animated-weather';
+
 import 'bootstrap/dist/css/bootstrap.css';
 import Card from 'react-bootstrap/Card';
 import axios from 'axios';
+import WeatherForecastDay from './WeatherForecastDay';
 
 export default function WeatherForecast(props) {
-    // if (props.weatherData) {
+    let [loaded, setLoaded] = useState(false);
+    let [forecast, setForecast] = useState(null);
+
     function showForecast(response) {
-        console.log(response.data);
+        console.log(response.data.daily);
+        setForecast(response.data.daily);
+        setLoaded(true);
     }
-
-    let apiKey = '1ee4264117b73d2263eecd562f31ef5c';
-    let units = 'metric';
-    let lat = 37.773972;
-    let lon = -122.431297;
-    let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
-    axios.get(apiUrl).then(showForecast);
-
-    return (
-        <div className='weather-forecast'>
-            <div className='container'>
-                <Card body className='forecast-card'>
-                    <div className='weather-table '>
-                        <div className='row'>
-                            <div className='col'>
-                                <div className='forecast-day'>Wed</div>
-                                <div className='forecast-icon'>
-                                    <ReactAnimatedWeather
-                                        className='animated-icon'
-                                        icon='CLEAR_DAY'
-                                        color='orange'
-                                        size='48'
-                                        animate='true'
-                                    />
+    if (loaded) {
+        return (
+            <div className='weather-forecast'>
+                <div className='container'>
+                    <Card body className='forecast-card'>
+                        <div className='weather-table '>
+                            <div className='row'>
+                                <div className='col'>
+                                    <WeatherForecastDay data={forecast[0]} />
                                 </div>
-                                <span className='forecast-temp-max'>
-                                    20&deg;
-                                </span>
-                                <span className='forecast-temp-min'>
-                                    10&deg;
-                                </span>
                             </div>
                         </div>
-                    </div>
-                </Card>
+                    </Card>
+                </div>
             </div>
-        </div>
-    );
-    // }
+        );
+    } else {
+        let apiKey = 'fa90t5bf5523344e459f280fabbb9o83';
+        let latitude = props.coordinates.lat;
+        let longitude = props.coordinates.lon;
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+        https: console.log(apiUrl);
+        axios.get(apiUrl).then(showForecast);
+
+        return null;
+    }
 }

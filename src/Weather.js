@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import WeatherData from './WeatherData';
 import './Weather.css';
-import WeatherForecast from './WeatherForecast';
 
 export default function Weather() {
     let [city, setCity] = useState(null);
@@ -15,7 +14,7 @@ export default function Weather() {
     function handleSubmit(event) {
         event.preventDefault();
 
-        let apiKey = '1ee4264117b73d2263eecd562f31ef5c';
+        let apiKey = 'e5ac1cb96c3cdbe89abd91f7112a7bf7';
         let units = 'metric';
         city = city.split(' ').join('+');
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
@@ -39,7 +38,6 @@ export default function Weather() {
                 </form>
                 <h1 className='cityName'>{city}</h1>
                 <WeatherData weatherData={weatherData} />
-                <WeatherForecast cordinates={weatherData} />
             </div>
         </div>
     );
