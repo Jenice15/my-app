@@ -6,7 +6,6 @@ import './Weather.css';
 export default function Weather() {
     let [city, setCity] = useState(null);
     const [weatherData, setWeatherData] = useState(null);
-    // let upperCaseCity = city.toUpperCase();
 
     function upadteCity(event) {
         setCity(event.target.value);
@@ -18,7 +17,6 @@ export default function Weather() {
         let units = 'metric';
         city = city.split(' ').join('+');
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-        console.log(apiUrl);
         axios.get(apiUrl).then(function (response) {
             setWeatherData(response.data);
         });

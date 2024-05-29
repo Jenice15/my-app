@@ -1,10 +1,8 @@
 import './App.css';
 import Weather from './Weather';
-// import WeatherForecast from './WeatherForecast';
 import Card from 'react-bootstrap/Card';
 
 export default function App() {
-    // alert('Hello');
     return (
         <div className='App'>
             <Card className='Card mx-auto'>
