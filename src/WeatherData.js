@@ -24,7 +24,7 @@ export default function WeatherData(props) {
                     <Card.Body>
                         <div className='summaryTempData'>
                             <FormattedDate date={date} />
-                            <img src={icon} />
+                            <img src={icon} alt='Weather Icon' />
                             <div className='temp'>
                                 <span className='tempUnits'>
                                     <TemperatureUnits celsius={temperature} />
