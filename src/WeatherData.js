@@ -5,6 +5,7 @@ import './WeatherData.css';
 import FormattedDate from './FormattedDate';
 import TemperatureUnits from './TemperatureUnits';
 import WeatherForecast from './WeatherForecast';
+// import WeatherIcon from './WeatherIcon';
 
 export default function WeatherData(props) {
     if (props.weatherData) {
@@ -14,6 +15,7 @@ export default function WeatherData(props) {
         const humidity = props.weatherData.main.humidity;
         const wind = props.weatherData.wind.speed;
         const icon = `https://openweathermap.org/img/wn/${props.weatherData.weather[0].icon}@2x.png`;
+        console.log(icon);
         const date = new Date(props.weatherData.dt * 1000);
 
         return (
@@ -22,7 +24,7 @@ export default function WeatherData(props) {
                     <Card.Body>
                         <div className='summaryTempData'>
                             <FormattedDate date={date} />
-                            <img src={icon} alt={description} />
+                            <img src={icon} />
                             <div className='temp'>
                                 <span className='tempUnits'>
                                     <TemperatureUnits celsius={temperature} />
